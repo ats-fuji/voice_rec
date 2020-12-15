@@ -3,11 +3,11 @@ import socket
 
 class voice_rec():
 
-    def __init__(self,# 以下は変更が必要なら引数で渡すこと
+    def __init__(self,# 以下は変更が必要なら引数で渡すこと（変更不要であれば何も渡さない）
                  host = '127.0.0.1',# ソケット通信のIPアドレス
                  port = 10500,      # ソケット通信のポート番号
-                 main_path = '../julius/julius-kit/dictation-kit-v4.4/main.jconf',    # main.jconfのパス
-                 dict_path = '../julius/julius-kit/dictation-kit-v4.4/am-gmm.jconf'): # am-gmm.jconfのパス
+                 main_path = '../julius/julius-kit/dictation-kit-v4.4/main.jconf',      # main.jconfのパス
+                 dict_path = '../julius/julius-kit/dictation-kit-v4.4/am-gmm.jconf'):   # am-gmm.jconfのパス
         # Juliusモジュールモード起動
         subprocess.Popen(['julius','-C',main_path,'-C',dict_path,'-module'])
 
